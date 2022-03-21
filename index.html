@@ -35,12 +35,7 @@
         <!-- <div class="arjs-loader">
             <div>Loading, please wait...</div>
         </div> -->
-        <a-scene
-            vr-mode-ui="enabled: false;"
-            renderer="logarithmicDepthBuffer: true;"
-            embedded
-            arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-        >
+        <a-scene embedded arjs='sourceType: webcam; patternRatio: 0.75 trackingMethod: best maxDetectionRate: 60 detectionMode: mono' renderer='antialias: true; alpha: true; precision: medium;' vr-mode-ui="enabled: false" stats>
             <!-- we use cors proxy to avoid cross-origin problems -->
             <a-nft
             type="nft"
